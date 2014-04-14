@@ -1,4 +1,4 @@
-function Image = convertToGray(I)
+function Image = ConvertToGray(I)
 [r, c, ch] = size(I); 
     if(ch == 3)
         Image = I(:,:,1) * .25 + I(:,:,2) * .5 + I(:,:,3) * .25;
