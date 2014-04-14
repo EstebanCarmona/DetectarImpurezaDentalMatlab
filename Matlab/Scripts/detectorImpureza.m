@@ -11,6 +11,8 @@ for ju=1:2
     end
     [f c] = size(files);
 
+     contImg = 0;
+    
     %For que recorre las imágenes y les aplica la funcion Bottom Hat
     for i=1:f
         if ju==1
@@ -34,15 +36,16 @@ for ju=1:2
             end
         end
         
-        %if cont >= 1
+        if cont >= 1
             %disp (strcat(files(i).name,' -- ',int2str(cont)));
-            %imwrite(bhImagen, strcat(DIRDEFECTO,files(i).name));
-        %end
+            contImg = contImg + 1;
+        end
     end
+    contImg
     %Calculamos el error 
-    ErrorTotal = (cont/f)*100; 
+    ErrorTotal = (contImg/f)*100; 
      if ju==1
-        disp(strcat('El porcentaje de error en las imagenes con impurezas es: ',num2str(ErrorTotal) , '%')); 
+        disp(strcat('El porcentaje de error en las imagenes con impurezas es: ',num2str((100-ErrorTotal)) , '%')); 
     else 
         disp(strcat('El porcentaje de error en las imagenes sin impurezas es: ',num2str(ErrorTotal) , '%'));
      end
