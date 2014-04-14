@@ -1,16 +1,8 @@
 %Directorio de entrada de los archivos con defectos
 DIRENTRADA = '..\Imagenes\con defecto\';
 DIRENTRADA2 = '..\Imagenes\sin defecto\';
-
-%Directorios de la salida de los archivos resultantes.
-DIRDEFECTO = '..\Imagenes\Resultados\Defecto\'; 
-
-%Creamos la carpeta que almacena el imperfecto del diente
-mkdir(DIRDEFECTO);
-
 %Elemento estructural
 eleStructural = ones(4); 
-
 for ju=1:2
     if ju==1
         files = dir(strcat(DIRENTRADA,'*.bmp'));
@@ -47,5 +39,4 @@ for ju=1:2
             %imwrite(bhImagen, strcat(DIRDEFECTO,files(i).name));
         end
     end
-
 end
