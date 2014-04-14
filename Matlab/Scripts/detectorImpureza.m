@@ -34,9 +34,16 @@ for ju=1:2
             end
         end
         
-        if cont >= 1
+        %if cont >= 1
             %disp (strcat(files(i).name,' -- ',int2str(cont)));
             %imwrite(bhImagen, strcat(DIRDEFECTO,files(i).name));
-        end
+        %end
     end
+    %Calculamos el error 
+    ErrorTotal = (cont/f)*100; 
+     if ju==1
+        disp(strcat('El porcentaje de error en las imagenes con impurezas es: ',num2str(ErrorTotal) , '%')); 
+    else 
+        disp(strcat('El porcentaje de error en las imagenes sin impurezas es: ',num2str(ErrorTotal) , '%'));
+     end
 end
