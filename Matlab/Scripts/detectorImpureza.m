@@ -1,5 +1,6 @@
 %Directorio de entrada de los archivos con defectos
 DIRENTRADA = '..\Imagenes\con defecto\';
+DIRENTRADA2 = '..\Imagenes\sin defecto\';
 %Elemento estructural
 eleStructural = ones(4); 
 for ju=1:2
