@@ -41,7 +41,6 @@ for ju=1:2
             contImg = contImg + 1;
         end
     end
-    contImg
     %Calculamos el error 
     ErrorTotal = (contImg/f)*100; 
      if ju==1
